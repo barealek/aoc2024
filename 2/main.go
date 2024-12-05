@@ -11,7 +11,7 @@ import (
 var data string
 
 // Primary algorithm
-func isSave(report []int) bool {
+func isSafe(report []int) bool {
 	var forwardStepping = report[0] < report[1]
 
 	for i := 1; i < len(report); i++ {
@@ -70,7 +70,7 @@ func main() {
 	var safe int
 
 	for _, r := range reports {
-		if isSave(r) {
+		if isSafe(r) {
 			safe++
 		}
 	}
